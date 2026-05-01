@@ -1,5 +1,6 @@
-# need at least v1.10 for COPY --parents 2024 goodness
 # syntax=docker/dockerfile:1.10
+# need at least v1.10 for COPY --parents 2024 goodness
+
 FROM nginx:alpine
 
 WORKDIR /usr/share/nginx/html
