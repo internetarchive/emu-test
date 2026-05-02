@@ -8,6 +8,8 @@ WORKDIR /usr/share/nginx/html
 RUN rm -f index.html && \
     ln -sf /usr/share/nginx/html/default.conf /etc/nginx/conf.d/default.conf
 
+COPY --parents ruffle r2d2 /x1/
+
 # split COPY . . into many layers so a single file change only re-pulls one small layer.
 # (one 5GB layer is brutal — any network hiccup on docker pull restarts from zero)
 #
